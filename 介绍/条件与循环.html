@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>条件与循环</title>
+    <div id="app-4">
+        <p v-if="seen">你可以把我隐藏起来</p>
+    </div>
+
+    <div id="app-5">
+        <ol>
+            <li v-for="table in tables">
+                {{table.text}}
+            </li>
+        </ol>
+    </div>
+    <!-- 开发环境版本，包含了有帮助的命令行警告 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<body>
+<script type="application/javascript">
+    var app4 = new Vue({
+        el: '#app-4',
+        data: {
+            seen: false
+        }
+    })
+
+    var app5 = new Vue({
+        el:'#app-5',
+        data:{
+            tables: [
+                {text: '1. 我爱学习'},
+                {text: '2. 我爱祖国'},
+                {text: '3. 我爱Arch'}
+            ]
+        }
+    })
+</script>
+
+</body>
+</html>
